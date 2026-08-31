@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    corporate --default,
+    night --prefersdark;
+}
+
+/* Drives SidebarIconDrawer.jsx's icon-only collapse: descendants opt into
+   collapsed/expanded-only styling with is-drawer-close:/is-drawer-open:
+   based on which marker class the sidebar root currently carries. */
+@custom-variant is-drawer-close (.is-drawer-close &);
+@custom-variant is-drawer-open (.is-drawer-open &);
+
+/* daisyUI's .drawer-side clips its content (to hide the mobile drawer while
+   closed). That also clips SidebarIconDrawer.jsx's collapsed-state tooltips
+   and flyout menus, which need to render past the icon rail's edge. Lift
+   the clip only while it's hosting a collapsed sidebar; the mobile-closed
+   drawer never carries is-drawer-close (collapse resets below lg), so its
+   clipping is untouched. */
+.drawer-side:has(.is-drawer-close) {
+  overflow: visible;
+}
+
+/* A slightly more generous, contemporary radius scale across every daisyUI
+   component (buttons, inputs, badges, cards, modals) than the theme defaults. */
+:root {
+  --radius-selector: 0.75rem;
+  --radius-field: 0.65rem;
+  --radius-box: 1.25rem;
+}
+
+/* Keep the brand accent (primary/secondary) fixed to Winter's values on Dim too */
+/* [data-theme="dim"] {
+  --color-primary: oklch(56.86% 0.255 257.57);
+  --color-primary-content: oklch(91.372% 0.051 257.57);
+  --color-secondary: oklch(42.551% 0.161 282.339);
+  --color-secondary-content: oklch(88.51% 0.032 282.339);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-primary: oklch(56.86% 0.255 257.57);
+    --color-primary-content: oklch(91.372% 0.051 257.57);
+    --color-secondary: oklch(42.551% 0.161 282.339);
+    --color-secondary-content: oklch(88.51% 0.032 282.339);
+  }
+} */

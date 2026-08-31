@@ -1,0 +1,38 @@
+export const AGENCIES = [
+  {
+    id: "madly",
+    name: "Madly",
+    contactPerson: "Zubaer Bin Alam",
+    address: "House 12, Road 5, Gulshan, Dhaka",
+    tag: "madly",
+    description: "Madly",
+    resources: ["Web", "App"],
+  },
+  {
+    id: "atmsl",
+    name: "Asiatic Trade Marketing Services Limited",
+    contactPerson: "Tania Rahman",
+    address: "Bir Uttam Mir Shawkat Sarak, Tejgaon, Dhaka",
+    tag: "atmsl",
+    description: "Asiatic Trade Marketing Services Limited",
+    resources: ["Web", "App", "Both"],
+  },
+  {
+    id: "imsl",
+    name: "IMSL",
+    contactPerson: "Debashis Chandra Shil",
+    address: "Agrabad Commercial Area, Chattogram",
+    tag: "imsl",
+    description: "Interspeed Marketing Solutions Limited",
+    resources: ["Web", "App"],
+  },
+  {
+    id: "ims",
+    name: "Integrated Marketing Service Ltd.",
+    contactPerson: "—",
+    address: "No address available",
+    tag: "ims",
+    description: "Integrated Marketing Service Ltd. is a brand and communication agency",
+    resources: ["Web", "App", "Both"],
+  },
+];
