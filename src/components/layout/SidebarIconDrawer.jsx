@@ -123,7 +123,7 @@ export function SidebarIconDrawer() {
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors is-drawer-close:justify-center is-drawer-close:px-2 ${
                   activeGroupKey === item.key
                     ? "bg-primary/10 text-primary"
-                    : "text-base-content/65 hover:bg-base-200"
+                    : "text-base-content/85 hover:bg-base-200"
                 }`}
               >
                 {item.icon}
@@ -152,7 +152,7 @@ export function SidebarIconDrawer() {
                           `truncate transition-colors ${
                             isActive
                               ? "active bg-primary/10 text-primary font-medium"
-                              : "text-base-content/60 hover:bg-base-200"
+                              : "text-base-content/80 hover:bg-base-200"
                           }`
                         }
                       >
@@ -173,7 +173,7 @@ export function SidebarIconDrawer() {
                             `block px-3 py-2 rounded-lg text-sm truncate transition-colors ${
                               isActive
                                 ? "bg-primary/10 text-primary font-medium"
-                                : "text-base-content/60 hover:bg-base-200"
+                                : "text-base-content/80 hover:bg-base-200"
                             }`
                           }
                         >
@@ -197,7 +197,7 @@ export function SidebarIconDrawer() {
                 } ${
                   isActive
                     ? "bg-primary/10 text-primary"
-                    : "text-base-content/65 hover:bg-base-200"
+                    : "text-base-content/85 hover:bg-base-200"
                 }`
               }
             >
